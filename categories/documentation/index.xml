@@ -1,0 +1,98 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>文档 - category - Brief</title>
+        <link>https://brief-rf.github.io/categories/documentation/</link>
+        <description>文档 - category - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 24 Aug 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+    <title>搭建自己的云端IDE</title>
+    <link>https://brief-rf.github.io/codeserver/</link>
+    <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/codeserver/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
+            </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>Google colab笔记</title>
+    <link>https://brief-rf.github.io/colabdrive/</link>
+    <pubDate>Mon, 24 Aug 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/colabdrive/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/colab.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>Google Colab之挂载谷歌硬盘</strong></p>]]></description>
+</item><item>
+    <title>大学英语四级考试</title>
+    <link>https://brief-rf.github.io/aboutcet4/</link>
+    <pubDate>Fri, 21 Aug 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/aboutcet4/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cet4.jpeg" referrerpolicy="no-referrer">
+            </div><p><strong>大学英语CET4考试相关</strong></p>]]></description>
+</item><item>
+    <title>Termux-api之termux-dialog</title>
+    <link>https://brief-rf.github.io/termux-dialog/</link>
+    <pubDate>Thu, 11 Jun 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/termux-dialog/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/termux.jpg" referrerpolicy="no-referrer">
+            </div>官方的命令讲解 1 2 3 4 5 6 7 Usage: termux-dialog widget [options] Get user input w/ different widgets! Default: text -h, help Show this help -l, list List all widgets and their options -t, title Set title of input dialog (optional) 翻译后 1 2 3 4 5 6 7 #使用: termux-dialog widget [options] #获取用户输]]></description>
+</item><item>
+    <title>Termux-api之termux-toast</title>
+    <link>https://brief-rf.github.io/termux-toast/</link>
+    <pubDate>Thu, 11 Jun 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/termux-toast/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/termux.jpg" referrerpolicy="no-referrer">
+            </div>官方的命令讲解 1 2 3 4 5 6 7 8 9 Usage: termux-toast [-b bgcolor] [-c color] [-g gravity] [-s] [text] Show text in a Toast (a transient popup). The text to show is either supplied as arguments or read from stdin if no arguments are given. -h show this help -b set background color (default: gray) -c set text color (default: white) -g set]]></description>
+</item><item>
+    <title>制作自己的jar并用shell调用</title>
+    <link>https://brief-rf.github.io/framework.zh/</link>
+    <pubDate>Sat, 14 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/framework.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/android.jpg" referrerpolicy="no-referrer">
+            </div>推送第三方jar至/system/framework 1.工具 安卓手机 AIDE软件 MT管理器 Termux软件 2.教程 打开AIDE，创建一个ja]]></description>
+</item><item>
+    <title>GoogleDrive映射到本地</title>
+    <link>https://brief-rf.github.io/googledrivemap.zh/</link>
+    <pubDate>Sun, 08 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/googledrivemap.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
+            </div>GoogleTeamDrive映射到本地 1.工具安装工具 rclone和winsfp（Windows使用rclone必要插件） 2.配置工具 进入]]></description>
+</item><item>
+    <title>Google Drive免费搭建网盘</title>
+    <link>https://brief-rf.github.io/googledrivefreeselfish.zh/</link>
+    <pubDate>Thu, 05 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/googledrivefreeselfish.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
+            </div>Google Drive免费搭建个人网盘 上篇博客讲了怎么获得无限网盘容量，这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。 1.GoI]]></description>
+</item><item>
+    <title>免费获得Google Drive无限空间</title>
+    <link>https://brief-rf.github.io/getgoogleteamdrive.zh/</link>
+    <pubDate>Thu, 05 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/getgoogleteamdrive.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
+            </div>免费获得Google Drive无限空间 Google Drive默认情况先会给你15G的储存空间，但是这些空间对于一些人来说不够用的，并且Google Dr]]></description>
+</item><item>
+    <title>Markdown软件推荐</title>
+    <link>https://brief-rf.github.io/markdownsoftware.zh/</link>
+    <pubDate>Wed, 04 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/markdownsoftware.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/markdown.jpg" referrerpolicy="no-referrer">
+            </div>Markdown写作软件推荐 1.WIN Typora 自从电脑开始写markdown笔记的时候我就开始用Typora了，刚开始用的时候还没有图片自动上传功能，几天]]></description>
+</item></channel>
+</rss>

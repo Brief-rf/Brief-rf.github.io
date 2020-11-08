@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>code-server - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/code-server/</link>
+        <description>code-server - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/code-server/" rel="self" type="application/rss+xml" /><item>
+    <title>搭建自己的云端IDE</title>
+    <link>https://brief-rf.github.io/codeserver/</link>
+    <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/codeserver/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
+            </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item></channel>
+</rss>

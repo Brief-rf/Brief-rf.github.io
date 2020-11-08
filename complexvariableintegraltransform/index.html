@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>复变函数与积分变换知识整理 - Brief</title><meta name="Description" content="关于"><meta property="og:title" content="复变函数与积分变换知识整理" />
+<meta property="og:description" content="课时一 复数 1课时一 复数 1.复数的表示、几何意义 2.复数的运算 3.复数的指数形式 4.复数的方根 课时二 复变函数 课时二 复变函数 1.定义 2.复数可导" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brief-rf.github.io/complexvariableintegraltransform/" />
+<meta property="og:image" content="https://brief-rf.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-06-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brief-rf.github.io/logo.png"/>
+
+<meta name="twitter:title" content="复变函数与积分变换知识整理"/>
+<meta name="twitter:description" content="课时一 复数 1课时一 复数 1.复数的表示、几何意义 2.复数的运算 3.复数的指数形式 4.复数的方根 课时二 复变函数 课时二 复变函数 1.定义 2.复数可导"/>
+<meta name="application-name" content="Brief">
+<meta name="apple-mobile-web-app-title" content="Brief"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://brief-rf.github.io/complexvariableintegraltransform/" /><link rel="prev" href="https://brief-rf.github.io/ecperiment1/" /><link rel="next" href="https://brief-rf.github.io/termux-toast/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "复变函数与积分变换知识整理",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/brief-rf.github.io\/complexvariableintegraltransform\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/brief-rf.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "复变函数, 积分变换, 知识笔记","wordcount":  462 ,
+        "url": "https:\/\/brief-rf.github.io\/complexvariableintegraltransform\/","datePublished": "2020-06-03T00:00:00+00:00","dateModified": "2020-06-03T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Brief","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/brief-rf.github.io\/images\/avatar.png",
+                    "width":  384 ,
+                    "height":  384 
+                }},"author": {
+                "@type": "Person",
+                "name": "Brief"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i>  </a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i>  </a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i>  </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i>  </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i>  </a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i>  </a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i></a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i></a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i></a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i></a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i></a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i></a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">复变函数与积分变换知识整理</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Brief</a></span>&nbsp;<span class="post-category"></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-03">2020-06-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1课时一--复数">1课时一  <em>复数</em></a>
+      <ul>
+        <li><a href="#1复数的表示几何意义">1.复数的表示、几何意义</a></li>
+        <li><a href="#2复数的运算">2.复数的运算</a></li>
+        <li><a href="#3复数的指数形式">3.复数的指数形式</a></li>
+        <li><a href="#4复数的方根">4.复数的方根</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时二--复变函数-1">课时二  <em>复变函数</em></a>
+      <ul>
+        <li><a href="#1定义">1.定义</a></li>
+        <li><a href="#2复数可导条件柯西黎曼方程">2.复数可导条件（柯西黎曼方程）</a></li>
+        <li><a href="#3解析函数">3.解析函数</a></li>
+        <li><a href="#4判断函数可导解析步骤">4.判断函数可导/解析步骤</a></li>
+        <li><a href="#5可导-连续-解析-关系">5.可导 连续 解析 关系</a></li>
+        <li><a href="#6调和函数">6.调和函数</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时三--初等函数-1">课时三  <em>初等函数</em></a>
+      <ul>
+        <li><a href="#1exp指数函数">1.exp指数函数</a></li>
+        <li><a href="#2ln对数函数">2.Ln对数函数</a></li>
+        <li><a href="#3ab幂函数">3.a^b幂函数</a></li>
+        <li><a href="#4三角函数">4.三角函数</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时四--级数-1">课时四  <em>级数</em></a>
+      <ul>
+        <li><a href="#1复数列的极限">1.复数列的极限</a></li>
+        <li><a href="#2收敛收敛半径">2.收敛、收敛半径</a></li>
+        <li><a href="#3和函数幂级数">3.和函数、幂级数</a></li>
+        <li><a href="#4洛朗级数">4.洛朗级数</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时五--求积分-1">课时五  <em>求积分</em></a>
+      <ul>
+        <li><a href="#1简单方法-参数方程法">1.简单方法 参数方程法</a></li>
+        <li><a href="#2柯西古萨基本定理">2.柯西古萨基本定理</a></li>
+        <li><a href="#3柯西积分公式">3.柯西积分公式</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时六-留数-1">课时六 <em>留数</em></a>
+      <ul>
+        <li><a href="#1奇点和零点">1.奇点和零点</a></li>
+        <li><a href="#2留数的定义">2.留数的定义</a></li>
+        <li><a href="#3求留数的规则iii">3.求留数的规则I、II</a></li>
+        <li><a href="#4求留数的规则iiiiv">4.求留数的规则III、IV</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#课时七--利用留数求积分-1">课时七  <em>利用留数求积分</em></a></li>
+        <li><a href="#1利用留数求积分">1.利用留数求积分</a></li>
+        <li><a href="#2求积分方法总结">2.求积分方法总结</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时八--傅里叶变换-1">课时八  <em>傅里叶变换</em></a>
+      <ul>
+        <li><a href="#1δt函数">1.δ(t)函数</a></li>
+        <li><a href="#2傅里叶变换">2.傅里叶变换</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#课时九--拉普拉斯变换-1">课时九  <em>拉普拉斯变换</em></a></li>
+    <li><a href="#1拉普拉斯知识">1.拉普拉斯知识</a>
+      <ul>
+        <li><a href="#1定义和性质">1.定义和性质</a></li>
+        <li><a href="#2常见拉普拉斯变换对">2.常见拉普拉斯变换对</a></li>
+        <li><a href="#3常用拉普拉斯变换的性质">3.常用拉普拉斯变换的性质</a></li>
+      </ul>
+    </li>
+    <li><a href="#2应用">2.应用</a>
+      <ul>
+        <li><a href="#1用拉普拉斯变换求初值问题">1.用拉普拉斯变换求初值问题</a></li>
+        <li><a href="#2用拉氏变换解方程">2.用拉氏变换解方程</a></li>
+        <li><a href="#3利用拉氏变换解方程卷积">3.利用拉氏变换解方程（卷积）</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="课时一--复数">课时一  <em>复数</em></h1>
+<h2 id="1课时一--复数">1课时一  <em>复数</em></h2>
+<h3 id="1复数的表示几何意义">1.复数的表示、几何意义</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224349178.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224349178.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224349178.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224349178.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224349178.png"
+        title="image-20200603224349178" /></p>
+<h3 id="2复数的运算">2.复数的运算</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224418038.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224418038.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224418038.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224418038.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224418038.png"
+        title="image-20200603224418038" /></p>
+<h3 id="3复数的指数形式">3.复数的指数形式</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224500500.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224500500.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224500500.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224500500.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224500500.png"
+        title="image-20200603224500500" /></p>
+<h3 id="4复数的方根">4.复数的方根</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224508344.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224508344.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224508344.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224508344.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603224508344.png"
+        title="image-20200603224508344" /></p>
+<h1 id="课时二--复变函数">课时二  <em>复变函数</em></h1>
+<h2 id="课时二--复变函数-1">课时二  <em>复变函数</em></h2>
+<h3 id="1定义">1.定义</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225002811.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225002811.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225002811.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225002811.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225002811.png"
+        title="image-20200603225002811" /></p>
+<h3 id="2复数可导条件柯西黎曼方程">2.复数可导条件（柯西黎曼方程）</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225107308.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225107308.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225107308.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225107308.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225107308.png"
+        title="image-20200603225107308" /></p>
+<h3 id="3解析函数">3.解析函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225128008.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225128008.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225128008.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225128008.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225128008.png"
+        title="image-20200603225128008" /></p>
+<h3 id="4判断函数可导解析步骤">4.判断函数可导/解析步骤</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225216207.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225216207.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225216207.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225216207.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225216207.png"
+        title="image-20200603225216207" /></p>
+<h3 id="5可导-连续-解析-关系">5.可导 连续 解析 关系</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225256192.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225256192.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225256192.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225256192.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225256192.png"
+        title="image-20200603225256192" /></p>
+<h3 id="6调和函数">6.调和函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225319027.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225319027.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225319027.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225319027.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225319027.png"
+        title="image-20200603225319027" /></p>
+<h1 id="课时三--初等函数">课时三  <em>初等函数</em></h1>
+<h2 id="课时三--初等函数-1">课时三  <em>初等函数</em></h2>
+<h3 id="1exp指数函数">1.exp指数函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225432128.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225432128.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225432128.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225432128.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225432128.png"
+        title="image-20200603225432128" /></p>
+<h3 id="2ln对数函数">2.Ln对数函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225454973.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225454973.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225454973.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225454973.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225454973.png"
+        title="image-20200603225454973" /></p>
+<h3 id="3ab幂函数">3.a^b幂函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225534478.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225534478.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225534478.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225534478.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225534478.png"
+        title="image-20200603225534478" /></p>
+<h3 id="4三角函数">4.三角函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225557330.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225557330.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225557330.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225557330.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225557330.png"
+        title="image-20200603225557330" /></p>
+<h1 id="课时四--级数">课时四  <em>级数</em></h1>
+<h2 id="课时四--级数-1">课时四  <em>级数</em></h2>
+<h3 id="1复数列的极限">1.复数列的极限</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225755384.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225755384.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225755384.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225755384.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225755384.png"
+        title="image-20200603225755384" /></p>
+<h3 id="2收敛收敛半径">2.收敛、收敛半径</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225813666.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225813666.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225813666.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225813666.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225813666.png"
+        title="image-20200603225813666" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225842278.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225842278.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225842278.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225842278.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225842278.png"
+        title="image-20200603225842278" /></p>
+<h3 id="3和函数幂级数">3.和函数、幂级数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225901030.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225901030.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225901030.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225901030.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225901030.png"
+        title="image-20200603225901030" /></p>
+<h3 id="4洛朗级数">4.洛朗级数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225942552.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225942552.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225942552.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225942552.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225942552.png"
+        title="image-20200603225942552" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225954317.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225954317.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225954317.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225954317.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603225954317.png"
+        title="image-20200603225954317" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230003749.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230003749.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230003749.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230003749.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230003749.png"
+        title="image-20200603230003749" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230023604.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230023604.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230023604.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230023604.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230023604.png"
+        title="image-20200603230023604" /></p>
+<h1 id="课时五--求积分">课时五  <em>求积分</em></h1>
+<h2 id="课时五--求积分-1">课时五  <em>求积分</em></h2>
+<h3 id="1简单方法-参数方程法">1.简单方法 参数方程法</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230138180.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230138180.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230138180.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230138180.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230138180.png"
+        title="image-20200603230138180" /></p>
+<h3 id="2柯西古萨基本定理">2.柯西古萨基本定理</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230214613.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230214613.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230214613.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230214613.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230214613.png"
+        title="image-20200603230214613" /></p>
+<h3 id="3柯西积分公式">3.柯西积分公式</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230234109.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230234109.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230234109.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230234109.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230234109.png"
+        title="image-20200603230234109" /></p>
+<h1 id="课时六-留数">课时六 <em>留数</em></h1>
+<h2 id="课时六-留数-1">课时六 <em>留数</em></h2>
+<h3 id="1奇点和零点">1.奇点和零点</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230346177.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230346177.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230346177.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230346177.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230346177.png"
+        title="image-20200603230346177" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230419690.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230419690.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230419690.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230419690.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230419690.png"
+        title="image-20200603230419690" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230427075.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230427075.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230427075.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230427075.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230427075.png"
+        title="image-20200603230427075" /></p>
+<h3 id="2留数的定义">2.留数的定义</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230446648.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230446648.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230446648.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230446648.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230446648.png"
+        title="image-20200603230446648" /></p>
+<h3 id="3求留数的规则iii">3.求留数的规则I、II</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230713487.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230713487.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230713487.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230713487.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230713487.png"
+        title="image-20200603230713487" /></p>
+<h3 id="4求留数的规则iiiiv">4.求留数的规则III、IV</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230753463.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230753463.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230753463.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230753463.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230753463.png"
+        title="image-20200603230753463" /></p>
+<h1 id="课时七--利用留数求积分">课时七  <em>利用留数求积分</em></h1>
+<h3 id="课时七--利用留数求积分-1">课时七  <em>利用留数求积分</em></h3>
+<h3 id="1利用留数求积分">1.利用留数求积分</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230929052.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230929052.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230929052.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230929052.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603230929052.png"
+        title="image-20200603230929052" /></p>
+<h3 id="2求积分方法总结">2.求积分方法总结</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231006227.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231006227.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231006227.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231006227.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231006227.png"
+        title="image-20200603231006227" /></p>
+<h1 id="课时八--傅里叶变换">课时八  <em>傅里叶变换</em></h1>
+<h2 id="课时八--傅里叶变换-1">课时八  <em>傅里叶变换</em></h2>
+<h3 id="1δt函数">1.δ(t)函数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231240901.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231240901.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231240901.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231240901.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231240901.png"
+        title="image-20200603231240901" /></p>
+<h3 id="2傅里叶变换">2.傅里叶变换</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231314470.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231314470.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231314470.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231314470.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231314470.png"
+        title="image-20200603231314470" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231324362.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231324362.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231324362.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231324362.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231324362.png"
+        title="image-20200603231324362" /></p>
+<h1 id="课时九--拉普拉斯变换">课时九  <em>拉普拉斯变换</em></h1>
+<h2 id="课时九--拉普拉斯变换-1">课时九  <em>拉普拉斯变换</em></h2>
+<h2 id="1拉普拉斯知识">1.拉普拉斯知识</h2>
+<h3 id="1定义和性质">1.定义和性质</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231424907.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231424907.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231424907.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231424907.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231424907.png"
+        title="image-20200603231424907" /></p>
+<h3 id="2常见拉普拉斯变换对">2.常见拉普拉斯变换对</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231500173.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231500173.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231500173.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231500173.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231500173.png"
+        title="image-20200603231500173" /></p>
+<h3 id="3常用拉普拉斯变换的性质">3.常用拉普拉斯变换的性质</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231524794.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231524794.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231524794.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231524794.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231524794.png"
+        title="image-20200603231524794" /></p>
+<h2 id="2应用">2.应用</h2>
+<h3 id="1用拉普拉斯变换求初值问题">1.用拉普拉斯变换求初值问题</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231627645.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231627645.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231627645.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231627645.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231627645.png"
+        title="image-20200603231627645" /></p>
+<h3 id="2用拉氏变换解方程">2.用拉氏变换解方程</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231738064.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231738064.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231738064.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231738064.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231738064.png"
+        title="image-20200603231738064" /></p>
+<h3 id="3利用拉氏变换解方程卷积">3.利用拉氏变换解方程（卷积）</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231840240.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231840240.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231840240.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231840240.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200603231840240.png"
+        title="image-20200603231840240" /></p>
+</div>
+
+<div>
+    
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+
+    <button id="rewardButton" disable="enable" background:transparent; style="background:transparent;border-style:none;"
+        onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+<div style="
+        font-size: 26px;
+        background: linear-gradient(500deg,#03a9f4,#f441a5,#ffeb3b,#f441a5,#03a9f4);
+        background-size: 400%;
+        width: 360px;
+        heght:120px
+
+        text-align: center;
+        border-radius: 50px;">
+赞赏</div></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://brief-rf.github.io/images/wx.jpg" alt="WeChat Pay"></a>
+            <h3>微信赞赏</h3>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://brief-rf.github.io/images/zfb.jpg" alt="Alipay"></a>
+            <h3>支付宝赞赏</h3>
+        </div>
+    </div>
+</div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/">复变函数</a>,&nbsp;<a href="/tags/%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/">积分变换</a>,&nbsp;<a href="/tags/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/">知识笔记</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ecperiment1/" class="prev" rel="prev" title="科大奥锐虚拟仿真实验"><i class="fas fa-angle-left fa-fw"></i>科大奥锐虚拟仿真实验</a>
+            <a href="/termux-toast/" class="next" rel="next" title="Termux-api之termux-toast">Termux-api之termux-toast<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Brief</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":12},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

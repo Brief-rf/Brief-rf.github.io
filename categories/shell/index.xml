@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Shell - category - Brief</title>
+        <link>https://brief-rf.github.io/categories/shell/</link>
+        <description>Shell - category - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 26 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/shell/" rel="self" type="application/rss+xml" /><item>
+    <title>通过shell命令启动活动</title>
+    <link>https://brief-rf.github.io/shell-dingding.zh/</link>
+    <pubDate>Wed, 26 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/shell-dingding.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/shell.jpg" referrerpolicy="no-referrer">
+            </div>通过shell命令启动活动 所用工具：mt管理器 钉钉 闲着无聊，研究了一点关于am start命令目的为了启动某一项活动达到定时完成任务的目的 具体]]></description>
+</item></channel>
+</rss>

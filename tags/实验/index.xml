@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>实验 - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/%E5%AE%9E%E9%AA%8C/</link>
+        <description>实验 - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 May 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E5%AE%9E%E9%AA%8C/" rel="self" type="application/rss+xml" /><item>
+    <title>科大奥锐虚拟仿真实验</title>
+    <link>https://brief-rf.github.io/ecperiment1/</link>
+    <pubDate>Wed, 27 May 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/ecperiment1/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/expeiment.png" referrerpolicy="no-referrer">
+            </div>科大奥锐虚拟仿真实验 实验视频来源于bilibili物理老师李传国的教学视频，在此表示感谢！ 科大奥锐虚拟仿真实验 自组式直流电桥测电阻 不良导体热]]></description>
+</item></channel>
+</rss>

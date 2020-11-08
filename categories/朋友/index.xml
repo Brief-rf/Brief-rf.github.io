@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>朋友 - category - Brief</title>
+        <link>https://brief-rf.github.io/categories/%E6%9C%8B%E5%8F%8B/</link>
+        <description>朋友 - category - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/%E6%9C%8B%E5%8F%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>一位即将离开的朋友</title>
+    <link>https://brief-rf.github.io/friendwillgone/</link>
+    <pubDate>Fri, 25 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/friendwillgone/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/bye.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>For a friend.</strong></p>]]></description>
+</item></channel>
+</rss>

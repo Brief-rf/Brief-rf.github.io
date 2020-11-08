@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Google Drive免费搭建网盘 - Brief</title><meta name="Description" content="这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。"><meta property="og:title" content="Google Drive免费搭建网盘" />
+<meta property="og:description" content="这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brief-rf.github.io/googledrivefreeselfish.zh/" />
+<meta property="og:image" content="https://brief-rf.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-03-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brief-rf.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Google Drive免费搭建网盘"/>
+<meta name="twitter:description" content="这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。"/>
+<meta name="application-name" content="Brief">
+<meta name="apple-mobile-web-app-title" content="Brief"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://brief-rf.github.io/googledrivefreeselfish.zh/" /><link rel="prev" href="https://brief-rf.github.io/getgoogleteamdrive.zh/" /><link rel="next" href="https://brief-rf.github.io/googledrivemap.zh/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Google Drive免费搭建网盘",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/brief-rf.github.io\/googledrivefreeselfish.zh\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/brief-rf.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "网盘, 教程, Google","wordcount":  436 ,
+        "url": "https:\/\/brief-rf.github.io\/googledrivefreeselfish.zh\/","datePublished": "2020-03-05T00:00:00+00:00","dateModified": "2020-03-05T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Brief","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/brief-rf.github.io\/images\/avatar.png",
+                    "width":  384 ,
+                    "height":  384 
+                }},"author": {
+                "@type": "Person",
+                "name": "Brief"
+            },"description": "这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i>  </a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i>  </a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i>  </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i>  </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i>  </a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i>  </a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i></a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i></a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i></a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i></a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i></a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i></a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Google Drive免费搭建网盘</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Brief</a></span>&nbsp;<span class="post-category"></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-05">2020-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/gdrive.jpg"
+        data-srcset="/images/gdrive.jpg, /images/gdrive.jpg 1.5x, /images/gdrive.jpg 2x"
+        data-sizes="auto"
+        alt="/images/gdrive.jpg"
+        title="这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1goindex获取代码">1.GoIndex获取代码</a>
+      <ul>
+        <li><a href="#第一步获取认证码">第一步：获取认证码</a></li>
+        <li><a href="#第二步生成代码">第二步：生成代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#cloud-flare快速部署">Cloud flare快速部署</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="google-drive免费搭建个人网盘">Google Drive免费搭建个人网盘</h1>
+<p>上篇博客讲了怎么获得无限网盘容量，这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。</p>
+<h2 id="1goindex获取代码">1.GoIndex获取代码</h2>
+<p>首先访问<a href="https://install.gd.workers.dev" target="_blank" rel="noopener noreffer">GoIndex网站</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305182836755.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305182836755.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305182836755.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305182836755.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305182836755.png"
+        title="image-20200305182836755" /></p>
+<h3 id="第一步获取认证码">第一步：获取认证码</h3>
+<p>选择你的账号登陆</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183147534.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183147534.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183147534.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183147534.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183147534.png"
+        title="image-20200305183147534" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183451309.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183451309.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183451309.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183451309.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183451309.png"
+        title="image-20200305183451309" /></p>
+<p>复制粘贴到下面第一个输入框内</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183537798.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183537798.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183537798.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183537798.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305183537798.png"
+        title="image-20200305183537798" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305194309672.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305194309672.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305194309672.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305194309672.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305194309672.png"
+        title="image-20200305194309672" /></p>
+<p>复制，粘贴到目录ID，根目录密码可以不用填写，后面可以修改的。</p>
+<h3 id="第二步生成代码">第二步：生成代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">var authConfig = {
+    &#34;siteName&#34;: &#34;GoIndex&#34;, // 网站名称
+    &#34;root_pass&#34;: &#34;index&#34;,  // 根目录密码，优先于.password
+    &#34;version&#34; : &#34;1.0.6&#34;, // 程序版本
+    &#34;theme&#34; : &#34;material&#34;, // material  classic 
+    &#34;client_id&#34;: &#34;**********.apps.googleusercontent.com&#34;,
+    &#34;client_secret&#34;: &#34;***********************&#34;,
+    &#34;refresh_token&#34;: &#34;**************************&#34;, // 授权 token
+    &#34;root&#34;: &#34;0AMaMyTwt7_s3Uk9PVA&#34; // 根目录ID
+};
+
+var gd;
+
+var html = `
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no&#34;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>${authConfig.siteName}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/donwa/goindex@${authConfig.version}/themes/${authConfig.theme}/app.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+`;
+
+addEventListener(&#39;fetch&#39;, event =&gt; {
+    event.respondWith(handleRequest(event.request));
+});
+
+/**
+ * Fetch and log a request
+ * @param {Request} request
+ */
+async function handleRequest(request) {
+    if(gd == undefined){
+      gd = new googleDrive(authConfig);
+    }
+*************************
+</code></pre></td></tr></table>
+</div>
+</div><p>复制代码，马上要用到呢</p>
+<h2 id="cloud-flare快速部署">Cloud flare快速部署</h2>
+<p>进入<a href="https://dash.cloudflare.com" target="_blank" rel="noopener noreffer">Cloud flare网站</a>注册一个账号。然后看下图</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195414967.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195414967.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195414967.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195414967.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195414967.png"
+        title="image-20200305195414967" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195439264.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195439264.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195439264.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195439264.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195439264.png"
+        title="image-20200305195439264" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195539924.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195539924.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195539924.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195539924.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305195539924.png"
+        title="image-20200305195539924" /></p>
+<p>把代码替换为你原来复制的</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305200140569.png"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305200140569.png, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305200140569.png 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305200140569.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/image-20200305200140569.png"
+        title="image-20200305200140569" /></p>
+<p>然后你就可以拥有你自己的网盘了，并且访问不需要梯子，文件下载可以用idm或者adm专用下载器。</p>
+<p>至此，教程结束！</p>
+</div>
+
+<div>
+    
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+
+    <button id="rewardButton" disable="enable" background:transparent; style="background:transparent;border-style:none;"
+        onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+<div style="
+        font-size: 26px;
+        background: linear-gradient(500deg,#03a9f4,#f441a5,#ffeb3b,#f441a5,#03a9f4);
+        background-size: 400%;
+        width: 360px;
+        heght:120px
+
+        text-align: center;
+        border-radius: 50px;">
+赞赏</div></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://brief-rf.github.io/images/wx.jpg" alt="WeChat Pay"></a>
+            <h3>微信赞赏</h3>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://brief-rf.github.io/images/zfb.jpg" alt="Alipay"></a>
+            <h3>支付宝赞赏</h3>
+        </div>
+    </div>
+</div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%BD%91%E7%9B%98/">网盘</a>,&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>,&nbsp;<a href="/tags/google/">Google</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/getgoogleteamdrive.zh/" class="prev" rel="prev" title="免费获得Google Drive无限空间"><i class="fas fa-angle-left fa-fw"></i>免费获得Google Drive无限空间</a>
+            <a href="/googledrivemap.zh/" class="next" rel="next" title="GoogleDrive映射到本地">GoogleDrive映射到本地<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Brief</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":12},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

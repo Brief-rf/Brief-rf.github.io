@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Termux-api之termux-toast - Brief</title><meta name="Description" content="这是一篇用于介绍termux-toast使用方法的文章。"><meta property="og:title" content="Termux-api之termux-toast" />
+<meta property="og:description" content="这是一篇用于介绍termux-toast使用方法的文章。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brief-rf.github.io/termux-toast/" />
+<meta property="og:image" content="https://brief-rf.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brief-rf.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Termux-api之termux-toast"/>
+<meta name="twitter:description" content="这是一篇用于介绍termux-toast使用方法的文章。"/>
+<meta name="application-name" content="Brief">
+<meta name="apple-mobile-web-app-title" content="Brief"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://brief-rf.github.io/termux-toast/" /><link rel="prev" href="https://brief-rf.github.io/complexvariableintegraltransform/" /><link rel="next" href="https://brief-rf.github.io/termux-dialog/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Termux-api之termux-toast",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/brief-rf.github.io\/termux-toast\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/brief-rf.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "教程, Termux-api, termux-dialog","wordcount":  504 ,
+        "url": "https:\/\/brief-rf.github.io\/termux-toast\/","datePublished": "2020-06-11T00:00:00+00:00","dateModified": "2020-06-11T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Brief","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/brief-rf.github.io\/images\/avatar.png",
+                    "width":  384 ,
+                    "height":  384 
+                }},"author": {
+                "@type": "Person",
+                "name": "Brief"
+            },"description": "这是一篇用于介绍termux-toast使用方法的文章。"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i>  </a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i>  </a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i>  </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i>  </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i>  </a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i>  </a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i></a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i></a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i></a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i></a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i></a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i></a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Termux-api之termux-toast</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Brief</a></span>&nbsp;<span class="post-category"></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-11">2020-06-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/termux.jpg"
+        data-srcset="/images/termux.jpg, /images/termux.jpg 1.5x, /images/termux.jpg 2x"
+        data-sizes="auto"
+        alt="/images/termux.jpg"
+        title="这是一篇用于介绍termux-toast使用方法的文章。" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#官方的命令讲解"><strong>官方的命令讲解</strong></a></li>
+            <li><a href="#翻译后"><strong>翻译后:</strong></a></li>
+            <li><a href="#示例">示例：</a>
+              <ul>
+                <li><a href="#1低级弹窗">1.低级弹窗</a></li>
+                <li><a href="#2中级弹窗">2.中级弹窗</a></li>
+                <li><a href="#3高级弹窗">3.高级弹窗</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h4 id="官方的命令讲解"><strong>官方的命令讲解</strong></h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">Usage: 
+    termux-toast <span class="o">[</span>-b bgcolor<span class="o">]</span> <span class="o">[</span>-c color<span class="o">]</span> <span class="o">[</span>-g gravity<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> <span class="o">[</span>text<span class="o">]</span> 
+    Show text in a Toast <span class="o">(</span>a transient popup<span class="o">)</span>. 
+    The text to show is either supplied as arguments or <span class="nb">read</span> from stdin <span class="k">if</span> no arguments are given. 
+     -h show this <span class="nb">help</span> 
+     -b <span class="nb">set</span> background color <span class="o">(</span>default: gray<span class="o">)</span> 
+     -c <span class="nb">set</span> text color <span class="o">(</span>default: white<span class="o">)</span> 
+     -g <span class="nb">set</span> position of toast: <span class="o">[</span>top, middle, or bottom<span class="o">]</span> <span class="o">(</span>default: middle<span class="o">)</span> 
+     -s only show the toast <span class="k">for</span> a short <span class="k">while</span> NOTE: color can be a standard name <span class="o">(</span>i.e. red<span class="o">)</span> or <span class="m">6</span> / <span class="m">8</span> digit hex value <span class="o">(</span>i.e. <span class="s2">&#34;#FF0000&#34;</span> or <span class="s2">&#34;#FFFF0000&#34;</span><span class="o">)</span> where order is <span class="o">(</span>AA<span class="o">)</span>RRGGBB. Invalid color will revert to default value
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="翻译后"><strong>翻译后:</strong></h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#使用：</span>
+    termux-toast <span class="o">[</span>-b bgcolor<span class="o">]</span> <span class="o">[</span>-c color<span class="o">]</span> <span class="o">[</span>-g gravity<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> <span class="o">[</span>text<span class="o">]</span> 
+    <span class="c1">#在Toast中显示文本（瞬态弹出窗口）</span>
+    <span class="c1">#要显示的文本要么作为参数提供，要么在未提供参数的情况下从标准输入读取。</span>
+     -h <span class="c1">#展示这条帮助信息</span>
+     -b <span class="c1">#设置背景颜色（默认：灰色）</span> 
+     -c <span class="c1">#设置文本颜色（默认：白色）</span> 
+     -g <span class="c1">#设置弹窗的位置【顶部，中部或者底部】（默认：中部）</span> 
+     -s <span class="c1">#仅显示片刻吐司注意：颜色可以是标准名称（例如：红色、6/8位十六进制值）。无效的颜色将恢复为默认值</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="示例">示例：</h4>
+<h5 id="1低级弹窗">1.低级弹窗</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#弹出Brief</span>
+termux-toast Brief <span class="c1">#如果要弹出的信息中有空格，则需要加引号，否则空格后面的内容会被当作参数传递。</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast1.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast1.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast1.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast1.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast1.jpg"
+        title="termux-toast1" /></p>
+<h5 id="2中级弹窗">2.中级弹窗</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#弹出Helo Brief</span>
+termux-toast -b yellow -c red -g bottom -s <span class="s2">&#34;Hello Brief&#34;</span>
+    <span class="c1"># -b yellow 设置背景颜色为黄色</span>
+    <span class="c1"># -c red 设置文本颜色为红色</span>
+    <span class="c1"># -g bottom 设置弹窗位置为底部</span>
+    <span class="c1"># -s 显示时间比不加 -s 短一点点</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast2.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast2.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast2.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast2.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast2.jpg"
+        title="termux-toast2" /></p>
+<h5 id="3高级弹窗">3.高级弹窗</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#弹出变量内容</span>
+<span class="nv">num</span><span class="o">=</span><span class="m">520</span>
+termux-toast -b yellow -c red -g middle -s <span class="nv">$num</span>
+termux-toast -b yellow -c red -g middle -s <span class="nv">$RANDOM</span> <span class="c1">#随机弹出一串数字</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast3.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast3.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast3.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast3.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast3.jpg"
+        title="termux-toast3" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast4.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast4.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast4.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast4.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-toast4.jpg"
+        title="termux-toast4" /></p>
+</div>
+
+<div>
+    
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+
+    <button id="rewardButton" disable="enable" background:transparent; style="background:transparent;border-style:none;"
+        onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+<div style="
+        font-size: 26px;
+        background: linear-gradient(500deg,#03a9f4,#f441a5,#ffeb3b,#f441a5,#03a9f4);
+        background-size: 400%;
+        width: 360px;
+        heght:120px
+
+        text-align: center;
+        border-radius: 50px;">
+赞赏</div></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://brief-rf.github.io/images/wx.jpg" alt="WeChat Pay"></a>
+            <h3>微信赞赏</h3>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://brief-rf.github.io/images/zfb.jpg" alt="Alipay"></a>
+            <h3>支付宝赞赏</h3>
+        </div>
+    </div>
+</div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>,&nbsp;<a href="/tags/termux-api/">Termux-api</a>,&nbsp;<a href="/tags/termux-dialog/">termux-dialog</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/complexvariableintegraltransform/" class="prev" rel="prev" title="复变函数与积分变换知识整理"><i class="fas fa-angle-left fa-fw"></i>复变函数与积分变换知识整理</a>
+            <a href="/termux-dialog/" class="next" rel="next" title="Termux-api之termux-dialog">Termux-api之termux-dialog<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Brief</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":12},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

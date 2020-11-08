@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>制作自己的jar并用shell调用 - Brief</title><meta name="Description" content="关于"><meta property="og:title" content="制作自己的jar并用shell调用" />
+<meta property="og:description" content="推送第三方jar至/system/framework 1.工具 安卓手机 AIDE软件 MT管理器 Termux软件 2.教程 打开AIDE，创建一个ja" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brief-rf.github.io/framework.zh/" />
+<meta property="og:image" content="https://brief-rf.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-03-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brief-rf.github.io/logo.png"/>
+
+<meta name="twitter:title" content="制作自己的jar并用shell调用"/>
+<meta name="twitter:description" content="推送第三方jar至/system/framework 1.工具 安卓手机 AIDE软件 MT管理器 Termux软件 2.教程 打开AIDE，创建一个ja"/>
+<meta name="application-name" content="Brief">
+<meta name="apple-mobile-web-app-title" content="Brief"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://brief-rf.github.io/framework.zh/" /><link rel="prev" href="https://brief-rf.github.io/googledrivemap.zh/" /><link rel="next" href="https://brief-rf.github.io/ecperiment1/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "制作自己的jar并用shell调用",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/brief-rf.github.io\/framework.zh\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/brief-rf.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "Android, Shell, 教程","wordcount":  555 ,
+        "url": "https:\/\/brief-rf.github.io\/framework.zh\/","datePublished": "2020-03-14T00:00:00+00:00","dateModified": "2020-03-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Brief","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/brief-rf.github.io\/images\/avatar.png",
+                    "width":  384 ,
+                    "height":  384 
+                }},"author": {
+                "@type": "Person",
+                "name": "Brief"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i>  </a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i>  </a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i>  </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i>  </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i>  </a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i>  </a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i></a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i></a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i></a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i></a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i></a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i></a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">制作自己的jar并用shell调用</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Brief</a></span>&nbsp;<span class="post-category"></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-03-14">2020-03-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/android.jpg"
+        data-srcset="/images/android.jpg, /images/android.jpg 1.5x, /images/android.jpg 2x"
+        data-sizes="auto"
+        alt="/images/android.jpg"
+        title="/images/android.jpg" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1工具">1.工具</a></li>
+    <li><a href="#2教程">2.教程</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="推送第三方jar至systemframework">推送第三方jar至/system/framework</h1>
+<h2 id="1工具">1.工具</h2>
+<ul>
+<li>安卓手机</li>
+<li>AIDE软件</li>
+<li>MT管理器</li>
+<li>Termux软件</li>
+</ul>
+<h2 id="2教程">2.教程</h2>
+<ul>
+<li>打开AIDE，创建一个java项目。我命名为TestShell</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-132524.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-132524.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-132524.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-132524.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-132524.jpg"
+        title="Screenshot_20200313-132524" /></p>
+<ul>
+<li>项目新建后会自动生成Main.Java，因为仅供测试，便不再做改动，直接点击右上角的运行按钮编译运行，控制台会打印“hellow world”和让你输入数字。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133009.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133009.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133009.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133009.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133009.jpg"
+        title="Screenshot_20200313-133009" /></p>
+<ul>
+<li>用MT文件管理器打开项目所在文件夹，进入TestShell/bin/release/dex/,会有下图中的目录和文件，classes.dex.zip和oat/arm64/目录下的classes.dex.odex、classes.dex.vdex的这三个文件就是所需要的。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133112.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133112.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133112.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133112.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133112.jpg"
+        title="Screenshot_20200313-133112" /></p>
+<ul>
+<li>将classes.dex.zip重命名为TS.jar,用re管理器复制到/system/framework下，修改权限为644 ；将classes.dex.odex、classes.dex.vdex分别改名为TS.odex和TS.vdex,复制到/system/framework/oat/arm64目录下，该权限为644</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133241.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133241.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133241.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133241.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133241.jpg"
+        title="Screenshot_20200313-133241" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133546.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133546.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133546.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133546.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-133546.jpg"
+        title="Screenshot_20200313-133546" /></p>
+<ul>
+<li>新建脚本，命名为ts ，脚本内容如下：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/system/bin/sh
+</span><span class="cp"></span><span class="nv">base</span><span class="o">=</span>/system 
+<span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$base</span>/framework/TS.jar
+ 
+<span class="nb">exec</span> app_process <span class="nv">$base</span>/bin Main <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>将脚本复制到/system/bin下，修改权限为755。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134029.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134029.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134029.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134029.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134029.jpg"
+        title="Screenshot_20200313-134029" /></p>
+<ul>
+<li>打开终端模拟器，以root权限或系统用户权限运行runtest命令。</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134152.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134152.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134152.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134152.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/Screenshot_20200313-134152.jpg"
+        title="Screenshot_20200313-134152" /></p>
+</div>
+
+<div>
+    
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+
+    <button id="rewardButton" disable="enable" background:transparent; style="background:transparent;border-style:none;"
+        onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+<div style="
+        font-size: 26px;
+        background: linear-gradient(500deg,#03a9f4,#f441a5,#ffeb3b,#f441a5,#03a9f4);
+        background-size: 400%;
+        width: 360px;
+        heght:120px
+
+        text-align: center;
+        border-radius: 50px;">
+赞赏</div></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://brief-rf.github.io/images/wx.jpg" alt="WeChat Pay"></a>
+            <h3>微信赞赏</h3>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://brief-rf.github.io/images/zfb.jpg" alt="Alipay"></a>
+            <h3>支付宝赞赏</h3>
+        </div>
+    </div>
+</div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/android/">Android</a>,&nbsp;<a href="/tags/shell/">Shell</a>,&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/googledrivemap.zh/" class="prev" rel="prev" title="GoogleDrive映射到本地"><i class="fas fa-angle-left fa-fw"></i>GoogleDrive映射到本地</a>
+            <a href="/ecperiment1/" class="next" rel="next" title="科大奥锐虚拟仿真实验">科大奥锐虚拟仿真实验<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Brief</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":12},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

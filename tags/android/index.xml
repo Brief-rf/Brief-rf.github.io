@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Android - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/android/</link>
+        <description>Android - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/android/" rel="self" type="application/rss+xml" /><item>
+    <title>制作自己的jar并用shell调用</title>
+    <link>https://brief-rf.github.io/framework.zh/</link>
+    <pubDate>Sat, 14 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/framework.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/android.jpg" referrerpolicy="no-referrer">
+            </div>推送第三方jar至/system/framework 1.工具 安卓手机 AIDE软件 MT管理器 Termux软件 2.教程 打开AIDE，创建一个ja]]></description>
+</item><item>
+    <title>通过shell命令启动活动</title>
+    <link>https://brief-rf.github.io/shell-dingding.zh/</link>
+    <pubDate>Wed, 26 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/shell-dingding.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/shell.jpg" referrerpolicy="no-referrer">
+            </div>通过shell命令启动活动 所用工具：mt管理器 钉钉 闲着无聊，研究了一点关于am start命令目的为了启动某一项活动达到定时完成任务的目的 具体]]></description>
+</item></channel>
+</rss>

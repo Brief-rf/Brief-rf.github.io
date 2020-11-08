@@ -1,0 +1,98 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Brief</title>
+        <link>https://brief-rf.github.io/</link>
+        <description>关于</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Oct 2020 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://brief-rf.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>搭建自己的云端IDE</title>
+    <link>https://brief-rf.github.io/codeserver/</link>
+    <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/codeserver/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
+            </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>致那些对科研热爱的学弟学妹</title>
+    <link>https://brief-rf.github.io/foryou/</link>
+    <pubDate>Fri, 02 Oct 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/foryou/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/study.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>致新生-科研</strong></p>]]></description>
+</item><item>
+    <title>获取树莓派摄像头画面</title>
+    <link>https://brief-rf.github.io/operationmethod/</link>
+    <pubDate>Sat, 26 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/operationmethod/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/raspberry.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>简单使用教程</strong></p>]]></description>
+</item><item>
+    <title>一位即将离开的朋友</title>
+    <link>https://brief-rf.github.io/friendwillgone/</link>
+    <pubDate>Fri, 25 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/friendwillgone/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/bye.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>For a friend.</strong></p>]]></description>
+</item><item>
+    <title>烦心事</title>
+    <link>https://brief-rf.github.io/lifethink/</link>
+    <pubDate>Fri, 25 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/lifethink/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/annoyed.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>关于这两天发生的事情</strong></p>]]></description>
+</item><item>
+    <title>致自己-改变</title>
+    <link>https://brief-rf.github.io/wish/</link>
+    <pubDate>Fri, 25 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/wish/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/change.jpg" referrerpolicy="no-referrer">
+            </div>希望自己在新的学期能够有所改变 1.性格 1.1学会拒绝 1.2性格开朗 1.3多与她人交流 1.4敢于面对失败 2.能力 2.1学习大学课程 2.2学习技]]></description>
+</item><item>
+    <title>努力</title>
+    <link>https://brief-rf.github.io/rest/</link>
+    <pubDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/rest/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/river.jpg" referrerpolicy="no-referrer">
+            </div><p>生活感想-<strong>努力</strong></p>]]></description>
+</item><item>
+    <title>用英语怼无脑人</title>
+    <link>https://brief-rf.github.io/fuckidiotforeigner/</link>
+    <pubDate>Thu, 03 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/fuckidiotforeigner/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/idiot.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>教你如何用英文不带脏字地优雅回怼！</strong></p>]]></description>
+</item><item>
+    <title>线性代数笔记</title>
+    <link>https://brief-rf.github.io/lineralgebra/</link>
+    <pubDate>Wed, 02 Sep 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/lineralgebra/</guid>
+    <description><![CDATA[<p><strong>线性代数笔记记录-1</strong></p>]]></description>
+</item><item>
+    <title>致大一新生</title>
+    <link>https://brief-rf.github.io/forfreshstudent/</link>
+    <pubDate>Tue, 25 Aug 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/forfreshstudent/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/haust.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>致新生-关于刚入大学的那些事</strong></p>]]></description>
+</item></channel>
+</rss>

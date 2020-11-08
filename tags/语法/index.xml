@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>语法 - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/%E8%AF%AD%E6%B3%95/</link>
+        <description>语法 - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 24 Feb 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E8%AF%AD%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown 基本语法预览</title>
+    <link>https://brief-rf.github.io/basic-markdown-preview.zh/</link>
+    <pubDate>Mon, 24 Feb 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/basic-markdown-preview.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/markdown.png" referrerpolicy="no-referrer">
+            </div><p>这是一篇用于预览 <i class="fab fa-markdown"></i>&nbsp;Markdown 基本语法的文章。</p>
+<p>文章内容基于 <a href="https://github.github.com/gfm" target="_blank" rel="noopener noreffer">GitHub Flavored Markdown Spec</a>。</p>
+<p>不包含复杂的规则说明，仅仅展示 GFM 所约定的 Markdown 基本语法。</p>]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Termux-api之termux-dialog - Brief</title><meta name="Description" content="这是一篇用于介绍termux-dialog使用方法的文章。"><meta property="og:title" content="Termux-api之termux-dialog" />
+<meta property="og:description" content="这是一篇用于介绍termux-dialog使用方法的文章。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brief-rf.github.io/termux-dialog/" />
+<meta property="og:image" content="https://brief-rf.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brief-rf.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Termux-api之termux-dialog"/>
+<meta name="twitter:description" content="这是一篇用于介绍termux-dialog使用方法的文章。"/>
+<meta name="application-name" content="Brief">
+<meta name="apple-mobile-web-app-title" content="Brief"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://brief-rf.github.io/termux-dialog/" /><link rel="prev" href="https://brief-rf.github.io/termux-toast/" /><link rel="next" href="https://brief-rf.github.io/ilovehaust/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Termux-api之termux-dialog",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/brief-rf.github.io\/termux-dialog\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/brief-rf.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "教程, Termux-api, termux-dialog","wordcount":  1554 ,
+        "url": "https:\/\/brief-rf.github.io\/termux-dialog\/","datePublished": "2020-06-11T00:00:00+00:00","dateModified": "2020-06-11T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Brief","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/brief-rf.github.io\/images\/avatar.png",
+                    "width":  384 ,
+                    "height":  384 
+                }},"author": {
+                "@type": "Person",
+                "name": "Brief"
+            },"description": "这是一篇用于介绍termux-dialog使用方法的文章。"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i>  </a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i>  </a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i>  </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i>  </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i>  </a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i>  </a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i></a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i></a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i></a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i></a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i></a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i></a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Termux-api之termux-dialog</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Brief</a></span>&nbsp;<span class="post-category"></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-11">2020-06-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/termux.jpg"
+        data-srcset="/images/termux.jpg, /images/termux.jpg 1.5x, /images/termux.jpg 2x"
+        data-sizes="auto"
+        alt="/images/termux.jpg"
+        title="这是一篇用于介绍termux-dialog使用方法的文章。" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#官方的命令讲解"><strong>官方的命令讲解</strong></a></li>
+            <li><a href="#翻译后"><strong>翻译后</strong></a></li>
+            <li><a href="#termux-dialog--l-讲解">termux-dialog -l 讲解</a></li>
+            <li><a href="#示例">示例：</a>
+              <ul>
+                <li><a href="#1confirm">1.confirm</a></li>
+                <li><a href="#2checkbox">2.checkbox</a></li>
+                <li><a href="#3counter">3.counter</a></li>
+                <li><a href="#4date">4.date</a></li>
+                <li><a href="#5radio">5.radio</a></li>
+                <li><a href="#6sheet">6.sheet</a></li>
+                <li><a href="#7spinner">7.spinner</a></li>
+                <li><a href="#8speech">8.speech</a></li>
+                <li><a href="#9text">9.text</a></li>
+              </ul>
+            </li>
+            <li><a href="#提取文本内容"><em><strong>提取文本内容</strong></em></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h4 id="官方的命令讲解"><strong>官方的命令讲解</strong></h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">Usage: 
+    termux-dialog widget <span class="o">[</span>options<span class="o">]</span> 
+    Get user input w/ different widgets! 
+    Default: text 
+        -h, <span class="nb">help</span> Show this <span class="nb">help</span> 
+        -l, list List all widgets and their options 
+        -t, title Set title of input dialog <span class="o">(</span>optional<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="翻译后"><strong>翻译后</strong></h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#使用:</span>
+    termux-dialog widget <span class="o">[</span>options<span class="o">]</span>
+    <span class="c1">#获取用户输入的widget或者不同的widget</span>
+    <span class="c1">#默认：文本</span>
+        -h, <span class="c1">#展示这条帮助信息</span>
+        -l, <span class="c1">#列出所有的widget和它们对应的options</span>
+        -t, <span class="c1">#设置dialog的标题（非必须）</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="termux-dialog--l-讲解">termux-dialog -l 讲解</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">Supported widgets: 
+    confirm - Show confirmation dialog <span class="c1">#显示确认信息</span>
+        <span class="o">[</span>-i hint<span class="o">]</span> text hint <span class="o">(</span>optional<span class="o">)</span> <span class="c1">#需要提示的回答的文字</span>
+        <span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    checkbox - Select multiple values using checkboxes <span class="c1">#使用复选框选择多个值</span>
+        <span class="o">[</span>-v <span class="s2">&#34;,,,&#34;</span><span class="o">]</span> comma delim values to use <span class="o">(</span>required<span class="o">)</span> <span class="c1">#使用逗号间隔</span>
+        <span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    counter - Pick a number in specified range <span class="c1">#选择指定范围内的数字</span>
+        <span class="o">[</span>-r min,max,start<span class="o">]</span> comma delim of <span class="o">(</span>3<span class="o">)</span> numbers to use <span class="o">(</span>optional<span class="o">)</span> <span class="c1">#使用3个数字确定范围</span>
+        <span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    date - Pick a date <span class="c1">#选择一个日期</span>
+        <span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+        <span class="o">[</span>-d <span class="s2">&#34;dd-MM-yyyy kⓜ️s&#34;</span><span class="o">]</span> SimpleDateFormat Pattern <span class="k">for</span> date widget output <span class="o">(</span>optional<span class="o">)</span> <span class="c1">#设置输出格式</span>
+    radio - Pick a single value from radio buttons <span class="c1">#从单选按钮中选择一个值</span>
+        <span class="o">[</span>-v <span class="s2">&#34;,,,&#34;</span><span class="o">]</span> comma delim values to use <span class="o">(</span>required<span class="o">)</span> <span class="c1">#使用逗号间隔</span>
+        <span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    sheet - Pick a value from sliding bottom sheet <span class="c1">#从滑动底部表中选择一个值</span>
+    	<span class="o">[</span>-v <span class="s2">&#34;,,,&#34;</span><span class="o">]</span> comma delim values to use <span class="o">(</span>required<span class="o">)</span> <span class="c1">#使用逗号间隔</span>
+    	<span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    spinner - Pick a single value from a dropdown spinner <span class="c1">#从下拉菜单中选择一个值</span>
+    	<span class="o">[</span>-v <span class="s2">&#34;,,,&#34;</span><span class="o">]</span> comma delim values to use <span class="o">(</span>required<span class="o">)</span> 
+    	<span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    speech - Obtain speech using device microphone <span class="c1">#使用设备麦克风获取语音（可理解为文字转语音）</span>
+    	<span class="o">[</span>-i hint<span class="o">]</span> text hint <span class="o">(</span>optional<span class="o">)</span> <span class="c1">#设置提示的文字</span>
+    	<span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span> 
+    text - Input text <span class="o">(</span>default <span class="k">if</span> no widget specified<span class="o">)</span> <span class="c1">#输入文本</span>
+    	<span class="o">[</span>-i hint<span class="o">]</span> text hint <span class="o">(</span>optional<span class="o">)</span> <span class="c1">#需要提示的文字</span>
+    	<span class="o">[</span>-m<span class="o">]</span> multiple lines instead of single <span class="o">(</span>optional<span class="o">)</span>* <span class="c1">#多行文本内容</span> 
+    	<span class="o">[</span>-n<span class="o">]</span> enter input as numbers <span class="o">(</span>optional<span class="o">)</span>* <span class="c1">#输入类型为数字</span>
+    	<span class="o">[</span>-p<span class="o">]</span> enter input as password <span class="o">(</span>optional<span class="o">)</span> <span class="c1">#输入类型为密码</span>
+    	<span class="o">[</span>-t title<span class="o">]</span> <span class="nb">set</span> title of dialog <span class="o">(</span>optional<span class="o">)</span>  
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="示例">示例：</h4>
+<h5 id="1confirm">1.confirm</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog confirm -i <span class="s2">&#34;Choose Yes or No&#34;</span> -t <span class="s2">&#34;Do you copy?&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog1.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog1.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog1.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog1.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog1.bmp"
+        title="termux-dialog1" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择yes</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;yes&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择no</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;no&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="2checkbox">2.checkbox</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog checkbox -v <span class="s2">&#34;草莓,菠萝,香蕉,榴莲&#34;</span> -t <span class="s2">&#34;你喜欢吃哪些水果？&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/trmux-dialog2.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/trmux-dialog2.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/trmux-dialog2.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/trmux-dialog2.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/trmux-dialog2.bmp"
+        title="trmux-dialog2" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//仅选择香蕉</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;[香蕉]&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;香蕉&#34;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择全部</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;[草莓, 菠萝, 香蕉, 榴莲]&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&#34;values&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;草莓&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;菠萝&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;香蕉&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;榴莲&#34;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="3counter">3.counter</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog counter -r 1,120,18 -t <span class="s2">&#34;How old are you?&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog3.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog3.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog3.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog3.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog3.bmp"
+        title="termux-dialog3" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择</span><span class="mi">19</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;19&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="4date">4.date</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog date -t <span class="s2">&#34;2020年国庆日期：&#34;</span> -d <span class="s2">&#34;yyyy-MM-dd&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog4.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog4.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog4.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog4.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog4.bmp"
+        title="termux-dialog4" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//日期选择为</span><span class="mi">2020</span><span class="err">年</span><span class="mi">10</span><span class="err">月</span><span class="mi">1</span><span class="err">日</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;2020-10-01&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="5radio">5.radio</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog radio -v <span class="s2">&#34;男生,女生&#34;</span> -t <span class="s2">&#34;你喜欢男生还是女生？&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog5.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog5.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog5.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog5.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog5.bmp"
+        title="termux-dialog5" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择女生</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;女生&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="6sheet">6.sheet</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog sheet -v <span class="s2">&#34;月球,地球,火星&#34;</span> -t <span class="s2">&#34;你来自哪里？&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog6.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog6.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog6.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog6.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog6.bmp"
+        title="termux-dialog6" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择地球</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;地球&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="7spinner">7.spinner</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog spinner -v <span class="s2">&#34;语文,综合,英语,数学&#34;</span> -t <span class="s2">&#34;高考第三门考什么？&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog7.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog7.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog7.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog7.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog7.bmp"
+        title="termux-dialog7" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//选择综合</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;综合&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="8speech">8.speech</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog speech -i <span class="s2">&#34;你叫什么名字呀？&#34;</span> -t <span class="s2">&#34;What is your name?&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog8.bmp"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog8.bmp, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog8.bmp 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog8.bmp 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog8.bmp"
+        title="termux-dialog8" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;布里啾啾底部里都&#34;</span><span class="p">,</span> 
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="9text">9.text</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog text -i <span class="s2">&#34;你的qq号码：&#34;</span> -t <span class="s2">&#34;提示信息&#34;</span> -n
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog91.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog91.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog91.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog91.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog91.jpg"
+        title="termux-dialog91" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//输入我的qq号</span>
+<span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;1053651085&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog text -i <span class="s2">&#34;你的qq密码：&#34;</span> -t <span class="s2">&#34;提示信息&#34;</span> -p
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog92.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog92.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog92.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog92.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog92.jpg"
+        title="termux-dialog92" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;shazicaihuiqushi&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">termux-dialog text -i <span class="s2">&#34;写一篇10亿字的读后感：&#34;</span> -t <span class="s2">&#34;提示信息&#34;</span> -m
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog93.jpg"
+        data-srcset="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog93.jpg, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog93.jpg 1.5x, https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog93.jpg 2x"
+        data-sizes="auto"
+        alt="https://gitee.com//Brief-rf/BlogImages/raw/master/img/termux-dialog93.jpg"
+        title="termux-dialog93" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">-1</span><span class="p">,</span>
+  <span class="nt">&#34;text&#34;</span><span class="p">:</span> <span class="s2">&#34;你\n在\n想\n屁\n吃&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="提取文本内容"><em><strong>提取文本内容</strong></em></h4>
+<p>如果你不用jq来提取json字符转中text后面的内容，那么下面的一串代码将会帮助到你</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">#适用于大多情况</span>
+<span class="c1">#弹出对话框，并将对话框的内容作为shell命令执行</span>
+termux-dialog -t <span class="s2">&#34;Enter shell command&#34;</span><span class="p">|</span>awk -F<span class="s1">&#39;&#34;&#39;</span> <span class="s1">&#39;$2=/text/{print $4}&#39;</span><span class="p">|</span>bash
+</code></pre></td></tr></table>
+</div>
+</div></div>
+
+<div>
+    
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+
+    <button id="rewardButton" disable="enable" background:transparent; style="background:transparent;border-style:none;"
+        onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+<div style="
+        font-size: 26px;
+        background: linear-gradient(500deg,#03a9f4,#f441a5,#ffeb3b,#f441a5,#03a9f4);
+        background-size: 400%;
+        width: 360px;
+        heght:120px
+
+        text-align: center;
+        border-radius: 50px;">
+赞赏</div></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://brief-rf.github.io/images/wx.jpg" alt="WeChat Pay"></a>
+            <h3>微信赞赏</h3>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://brief-rf.github.io/images/zfb.jpg" alt="Alipay"></a>
+            <h3>支付宝赞赏</h3>
+        </div>
+    </div>
+</div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>,&nbsp;<a href="/tags/termux-api/">Termux-api</a>,&nbsp;<a href="/tags/termux-dialog/">termux-dialog</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/termux-toast/" class="prev" rel="prev" title="Termux-api之termux-toast"><i class="fas fa-angle-left fa-fw"></i>Termux-api之termux-toast</a>
+            <a href="/ilovehaust/" class="next" rel="next" title="我爱科大校历">我爱科大校历<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Brief</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":12},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

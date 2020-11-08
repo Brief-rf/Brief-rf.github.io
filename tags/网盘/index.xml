@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>网盘 - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/%E7%BD%91%E7%9B%98/</link>
+        <description>网盘 - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 08 Mar 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E7%BD%91%E7%9B%98/" rel="self" type="application/rss+xml" /><item>
+    <title>GoogleDrive映射到本地</title>
+    <link>https://brief-rf.github.io/googledrivemap.zh/</link>
+    <pubDate>Sun, 08 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/googledrivemap.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
+            </div>GoogleTeamDrive映射到本地 1.工具安装工具 rclone和winsfp（Windows使用rclone必要插件） 2.配置工具 进入]]></description>
+</item><item>
+    <title>Google Drive免费搭建网盘</title>
+    <link>https://brief-rf.github.io/googledrivefreeselfish.zh/</link>
+    <pubDate>Thu, 05 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/googledrivefreeselfish.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
+            </div>Google Drive免费搭建个人网盘 上篇博客讲了怎么获得无限网盘容量，这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。 1.GoI]]></description>
+</item><item>
+    <title>免费获得Google Drive无限空间</title>
+    <link>https://brief-rf.github.io/getgoogleteamdrive.zh/</link>
+    <pubDate>Thu, 05 Mar 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/getgoogleteamdrive.zh/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
+            </div>免费获得Google Drive无限空间 Google Drive默认情况先会给你15G的储存空间，但是这些空间对于一些人来说不够用的，并且Google Dr]]></description>
+</item></channel>
+</rss>
