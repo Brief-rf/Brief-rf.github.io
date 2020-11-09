@@ -4,7 +4,23 @@
         <link>https://brief-rf.github.io/tags/%E7%AC%94%E8%AE%B0/</link>
         <description>笔记 - tag - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Sep 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>pip换源</title>
+    <link>https://brief-rf.github.io/pipsource/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/pipsource/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/study.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>知识-笔记</strong></p>]]></description>
+</item><item>
+    <title>机器学习知识总结</title>
+    <link>https://brief-rf.github.io/ml1/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/ml1/</guid>
+    <description><![CDATA[<p><strong>笔记-科研</strong></p>]]></description>
+</item><item>
     <title>线性代数笔记</title>
     <link>https://brief-rf.github.io/lineralgebra/</link>
     <pubDate>Wed, 02 Sep 2020 00:00:00 &#43;0000</pubDate>

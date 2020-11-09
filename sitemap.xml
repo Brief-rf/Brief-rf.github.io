@@ -3,10 +3,15 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
             <loc>https://brief-rf.github.io/codeserver/</loc><lastmod>2020-08-01T16:45:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://brief-rf.github.io/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://brief-rf.github.io/categories/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://brief-rf.github.io/posts/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://brief-rf.github.io/tags/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://brief-rf.github.io/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/categories/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/pipsource/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/posts/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/tags/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/categories/documentation/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/ml1/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/tags/%E7%9F%A5%E8%AF%86/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://brief-rf.github.io/tags/%E7%AC%94%E8%AE%B0/</loc><lastmod>2020-11-09T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://brief-rf.github.io/tags/%E5%A4%A7%E5%AD%A6/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/categories/%E5%A4%A7%E5%AD%A6/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/tags/%E7%94%9F%E6%B4%BB/</loc><lastmod>2020-10-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -25,7 +30,6 @@
             <loc>https://brief-rf.github.io/rest/</loc><lastmod>2020-09-08T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/tags/%E6%AD%AA%E6%9E%9C%E4%BB%81/</loc><lastmod>2020-09-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/fuckidiotforeigner/</loc><lastmod>2020-09-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://brief-rf.github.io/tags/%E7%AC%94%E8%AE%B0/</loc><lastmod>2020-09-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc><lastmod>2020-09-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/lineralgebra/</loc><lastmod>2020-09-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/forfreshstudent/</loc><lastmod>2020-08-25T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -33,7 +37,6 @@
             <loc>https://brief-rf.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc><lastmod>2020-08-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/tags/%E5%8A%A0%E5%AF%86/</loc><lastmod>2020-08-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/categories/%E6%96%87%E6%9C%AC%E6%95%99%E7%A8%8B/</loc><lastmod>2020-08-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://brief-rf.github.io/categories/documentation/</loc><lastmod>2020-08-24T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/tags/cet4/</loc><lastmod>2020-08-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/aboutcet4/</loc><lastmod>2020-08-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://brief-rf.github.io/tags/%E8%8B%B1%E8%AF%AD/</loc><lastmod>2020-08-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/</link>
         <description>关于</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Oct 2020 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://brief-rf.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>搭建自己的云端IDE</title>
@@ -15,6 +15,22 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>pip换源</title>
+    <link>https://brief-rf.github.io/pipsource/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/pipsource/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/study.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>知识-笔记</strong></p>]]></description>
+</item><item>
+    <title>机器学习知识总结</title>
+    <link>https://brief-rf.github.io/ml1/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/ml1/</guid>
+    <description><![CDATA[<p><strong>笔记-科研</strong></p>]]></description>
 </item><item>
     <title>致那些对科研热爱的学弟学妹</title>
     <link>https://brief-rf.github.io/foryou/</link>
@@ -78,21 +94,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/idiot.jpg" referrerpolicy="no-referrer">
             </div><p><strong>教你如何用英文不带脏字地优雅回怼！</strong></p>]]></description>
-</item><item>
-    <title>线性代数笔记</title>
-    <link>https://brief-rf.github.io/lineralgebra/</link>
-    <pubDate>Wed, 02 Sep 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/lineralgebra/</guid>
-    <description><![CDATA[<p><strong>线性代数笔记记录-1</strong></p>]]></description>
-</item><item>
-    <title>致大一新生</title>
-    <link>https://brief-rf.github.io/forfreshstudent/</link>
-    <pubDate>Tue, 25 Aug 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/forfreshstudent/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/haust.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>致新生-关于刚入大学的那些事</strong></p>]]></description>
 </item></channel>
 </rss>

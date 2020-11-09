@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/categories/documentation/</link>
         <description>文档 - category - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 24 Aug 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
     <title>搭建自己的云端IDE</title>
     <link>https://brief-rf.github.io/codeserver/</link>
     <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
@@ -13,6 +13,22 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>pip换源</title>
+    <link>https://brief-rf.github.io/pipsource/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/pipsource/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/study.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>知识-笔记</strong></p>]]></description>
+</item><item>
+    <title>机器学习知识总结</title>
+    <link>https://brief-rf.github.io/ml1/</link>
+    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/ml1/</guid>
+    <description><![CDATA[<p><strong>笔记-科研</strong></p>]]></description>
 </item><item>
     <title>Google colab笔记</title>
     <link>https://brief-rf.github.io/colabdrive/</link>
@@ -76,23 +92,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
             </div>Google Drive免费搭建个人网盘 上篇博客讲了怎么获得无限网盘容量，这篇博客讲一下怎么用Google Drive免费搭建个人永久直链网盘。 1.GoI]]></description>
-</item><item>
-    <title>免费获得Google Drive无限空间</title>
-    <link>https://brief-rf.github.io/getgoogleteamdrive.zh/</link>
-    <pubDate>Thu, 05 Mar 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/getgoogleteamdrive.zh/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/gdrive.jpg" referrerpolicy="no-referrer">
-            </div>免费获得Google Drive无限空间 Google Drive默认情况先会给你15G的储存空间，但是这些空间对于一些人来说不够用的，并且Google Dr]]></description>
-</item><item>
-    <title>Markdown软件推荐</title>
-    <link>https://brief-rf.github.io/markdownsoftware.zh/</link>
-    <pubDate>Wed, 04 Mar 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/markdownsoftware.zh/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/markdown.jpg" referrerpolicy="no-referrer">
-            </div>Markdown写作软件推荐 1.WIN Typora 自从电脑开始写markdown笔记的时候我就开始用Typora了，刚开始用的时候还没有图片自动上传功能，几天]]></description>
 </item></channel>
 </rss>
