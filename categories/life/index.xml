@@ -4,7 +4,16 @@
         <link>https://brief-rf.github.io/categories/life/</link>
         <description>生活 - category - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Oct 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/life/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/life/" rel="self" type="application/rss+xml" /><item>
+    <title>没人比我更懂演讲</title>
+    <link>https://brief-rf.github.io/englishspeech/</link>
+    <pubDate>Tue, 10 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/englishspeech/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/nobody.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>英语演讲稿</strong></p>]]></description>
+</item><item>
     <title>致那些对科研热爱的学弟学妹</title>
     <link>https://brief-rf.github.io/foryou/</link>
     <pubDate>Fri, 02 Oct 2020 00:00:00 &#43;0000</pubDate>
@@ -85,12 +94,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/ilovehaust.png" referrerpolicy="no-referrer">
             </div><p><strong>我爱科大2020-2021校历</strong></p>]]></description>
-</item><item>
-    <title>学校二维码</title>
-    <link>https://brief-rf.github.io/qrcode/</link>
-    <pubDate>Wed, 01 Jan 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/qrcode/</guid>
-    <description><![CDATA[<p><strong>请勿非法使用，一切后果将由您本人承担</strong></p>]]></description>
 </item></channel>
 </rss>
