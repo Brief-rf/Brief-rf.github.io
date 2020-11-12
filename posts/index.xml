@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/posts/</link>
         <description> | Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>搭建自己的云端IDE</title>
     <link>https://brief-rf.github.io/codeserver/</link>
     <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
@@ -13,6 +13,15 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>大学英语四级考试</title>
+    <link>https://brief-rf.github.io/cet6/</link>
+    <pubDate>Thu, 12 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/cet6/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/cet6.png" referrerpolicy="no-referrer">
+            </div><p><strong>大学英语CET6考试相关</strong></p>]]></description>
 </item><item>
     <title>没人比我更懂演讲</title>
     <link>https://brief-rf.github.io/englishspeech/</link>
@@ -81,14 +90,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/change.jpg" referrerpolicy="no-referrer">
             </div>希望自己在新的学期能够有所改变 1.性格 1.1学会拒绝 1.2性格开朗 1.3多与她人交流 1.4敢于面对失败 2.能力 2.1学习大学课程 2.2学习技]]></description>
-</item><item>
-    <title>努力</title>
-    <link>https://brief-rf.github.io/rest/</link>
-    <pubDate>Tue, 08 Sep 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/rest/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/river.jpg" referrerpolicy="no-referrer">
-            </div><p>生活感想-<strong>努力</strong></p>]]></description>
 </item></channel>
 </rss>
