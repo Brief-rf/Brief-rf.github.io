@@ -4,7 +4,16 @@
         <link>https://brief-rf.github.io/categories/%E5%A4%A7%E5%AD%A6/</link>
         <description>大学 - category - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 12 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/%E5%A4%A7%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 Nov 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/%E5%A4%A7%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>工程实训</title>
+    <link>https://brief-rf.github.io/gcsx/</link>
+    <pubDate>Fri, 20 Nov 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/gcsx/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/gcsx.png" referrerpolicy="no-referrer">
+            </div><p><strong>工程实训相关</strong></p>]]></description>
+</item><item>
     <title>大学英语六级考试</title>
     <link>https://brief-rf.github.io/cet6/</link>
     <pubDate>Thu, 12 Nov 2020 00:00:00 &#43;0000</pubDate>
@@ -81,14 +90,5 @@
     <author></author>
     <guid>https://brief-rf.github.io/complexvariableintegraltransform/</guid>
     <description><![CDATA[课时一 复数 1课时一 复数 1.复数的表示、几何意义 2.复数的运算 3.复数的指数形式 4.复数的方根 课时二 复变函数 课时二 复变函数 1.定义 2.复数可导]]></description>
-</item><item>
-    <title>科大奥锐虚拟仿真实验</title>
-    <link>https://brief-rf.github.io/ecperiment1/</link>
-    <pubDate>Wed, 27 May 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/ecperiment1/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/expeiment.png" referrerpolicy="no-referrer">
-            </div>科大奥锐虚拟仿真实验 实验视频来源于bilibili物理老师李传国的教学视频，在此表示感谢！ 科大奥锐虚拟仿真实验 自组式直流电桥测电阻 不良导体热]]></description>
 </item></channel>
 </rss>
