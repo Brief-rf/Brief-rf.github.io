@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>人工智能 - tag - Brief</title>
-        <link>https://brief-rf.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
-        <description>人工智能 - tag - Brief</description>
+        <title>keras - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/keras/</link>
+        <description>keras - tag - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/keras/" rel="self" type="application/rss+xml" /><item>
     <title>Keras</title>
     <link>https://brief-rf.github.io/kerasnote2/</link>
     <pubDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</pubDate>
@@ -22,14 +22,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/keras.png" referrerpolicy="no-referrer">
             </div><p><strong>keras学习笔记（一）</strong></p>]]></description>
-</item><item>
-    <title>Google colab笔记</title>
-    <link>https://brief-rf.github.io/colabdrive/</link>
-    <pubDate>Mon, 24 Aug 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/colabdrive/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/colab.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>Google Colab之挂载谷歌硬盘</strong></p>]]></description>
 </item></channel>
 </rss>

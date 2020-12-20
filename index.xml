@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/</link>
         <description>关于</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 18 Dec 2020 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://brief-rf.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>搭建自己的云端IDE</title>
@@ -15,6 +15,24 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>Keras</title>
+    <link>https://brief-rf.github.io/kerasnote2/</link>
+    <pubDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/kerasnote2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/keras.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras学习笔记（二）</strong></p>]]></description>
+</item><item>
+    <title>Keras</title>
+    <link>https://brief-rf.github.io/kerasnote1/</link>
+    <pubDate>Sat, 19 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/kerasnote1/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/keras.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras学习笔记（一）</strong></p>]]></description>
 </item><item>
     <title>感想</title>
     <link>https://brief-rf.github.io/thoughts/</link>
@@ -74,23 +92,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/study.jpg" referrerpolicy="no-referrer">
             </div><p><strong>致新生-科研</strong></p>]]></description>
-</item><item>
-    <title>获取树莓派摄像头画面</title>
-    <link>https://brief-rf.github.io/operationmethod/</link>
-    <pubDate>Sat, 26 Sep 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/operationmethod/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/raspberry.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>简单使用教程</strong></p>]]></description>
-</item><item>
-    <title>一位即将离开的朋友</title>
-    <link>https://brief-rf.github.io/friendwillgone/</link>
-    <pubDate>Fri, 25 Sep 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/friendwillgone/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/bye.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>For a friend.</strong></p>]]></description>
 </item></channel>
 </rss>
