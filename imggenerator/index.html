@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>图片预处理 - Brief</title><meta name="Description" content="关于"><meta property="og:title" content="图片预处理" />
+<meta property="og:description" content="keras学习笔记（三）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brief-rf.github.io/imggenerator/" />
+<meta property="og:image" content="https://brief-rf.github.io/logo.png"/>
+<meta property="article:published_time" content="2020-12-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brief-rf.github.io/logo.png"/>
+
+<meta name="twitter:title" content="图片预处理"/>
+<meta name="twitter:description" content="keras学习笔记（三）"/>
+<meta name="application-name" content="Brief">
+<meta name="apple-mobile-web-app-title" content="Brief"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://brief-rf.github.io/imggenerator/" /><link rel="prev" href="https://brief-rf.github.io/lossfunction/" /><link rel="next" href="https://brief-rf.github.io/kerasnote2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "图片预处理",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/brief-rf.github.io\/imggenerator\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/brief-rf.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "keras, 人工智能","wordcount":  3195 ,
+        "url": "https:\/\/brief-rf.github.io\/imggenerator\/","datePublished": "2020-12-20T00:00:00+00:00","dateModified": "2020-12-20T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Brief","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/brief-rf.github.io\/images\/avatar.png",
+                    "width":  384 ,
+                    "height":  384 
+                }},"author": {
+                "@type": "Person",
+                "name": "Brief"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i>  </a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i>  </a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i>  </a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i>  </a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i>  </a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i>  </a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Brief"><span class="header-title-pre"><i class='far fa-smile-wink fa-fw'></i></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-file-alt fa-fw' style='color:red'></i></a><a class="menu-item" href="/categories/documentation/" title="文档"><i class='fas fa-folder fa-fw' style='color:orange'></i></a><a class="menu-item" href="/categories/life/" title="生活"><i class='fas fa-house-user fa-fw' style='color:#00008B'></i></a><a class="menu-item" href="/tags/" title="标签"><i class='fas fa-tags fa-fw' style='color:green'></i></a><a class="menu-item" href="/categories/" title="分类"><i class='fas fa-folder-open fa-fw'style='color:#8FBC8F'></i></a><a class="menu-item" href="/about/" title="关于"><i class='fas fa-id-card fa-fw' style='color:purple'></i></a><a class="menu-item" href="https://github.com/Brief-rf" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' style='color:#00008B'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title"></h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">图片预处理</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Brief</a></span>&nbsp;<span class="post-category"></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-20">2020-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;&nbsp;<span id="/imggenerator/" class="leancloud_visitors" data-flag-title="图片预处理">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/generator.png"
+        data-srcset="/images/generator.png, /images/generator.png 1.5x, /images/generator.png 2x"
+        data-sizes="auto"
+        alt="/images/generator.png"
+        title="/images/generator.png" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#图片生成器imagedatagenerator">图片生成器ImageDataGenerator</a></li>
+    <li><a href="#参数">参数</a></li>
+    <li><a href="#方法">方法</a></li>
+    <li><a href="#例子">例子</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><strong>keras学习笔记（三）</strong></p>
+<h2 id="图片生成器imagedatagenerator">图片生成器ImageDataGenerator</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">keras</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">featurewise_center</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">samplewise_center</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">featurewise_std_normalization</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">samplewise_std_normalization</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">zca_whitening</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">rotation_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">channel_shift_range</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">fill_mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+                                            <span class="n">cval</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                                            <span class="n">horizontal_flip</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">vertical_flip</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                                            <span class="n">rescale</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                            <span class="n">preprocessing_function</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                                            <span class="n">data_format</span><span class="o">=</span><span class="n">K</span><span class="o">.</span><span class="n">image_data_format</span><span class="p">())</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>用以生成一个batch的图像数据，支持实时数据提升。训练时该函数会无限生成数据，直到达到规定的epoch次数为止。</p>
+<h2 id="参数">参数</h2>
+<ul>
+<li>featurewise_center：布尔值，使数据集去中心化（均值为0），按feature执行</li>
+<li>samplewise_center：布尔值，使输入数据的每个样本均值为0</li>
+<li>featurewise_std_mormalization：布尔值，将输入除以数据集的标准差以完成标准化，按feature执行</li>
+<li>samplewise_std_normalization：布尔值，将输入的每个样本除以其自身的标准差</li>
+<li>zca_whitening：布尔值，对输入数据施加ZCA白化</li>
+<li>rotation_range：证书，数据提升时图片随机转动的角度</li>
+<li>width_shift_range：浮点数，图片宽度的某个比例，数据提升时图片水平偏移的幅度</li>
+<li>height_shift_range：浮点数，图片高度的某个比例，数据提升时图片竖直偏移的幅度</li>
+<li>shear_range：浮点数，剪切强度（逆时针方向的剪切变换角度）</li>
+<li>zoom_range：浮点数或形如<code>[lower,upper]</code>的列表，随机缩放的幅度，若为浮点数，则相当于<code>[lower,upper] = [1 - zoom_range, 1 + zoom_range]</code></li>
+<li>channel_shift_range：附带念书，随即通道偏移的幅度</li>
+<li>fill_mode：&lsquo;constant&rsquo;, &lsquo;nearest&rsquo;, &lsquo;reflect&rsquo;或&rsquo;wrap&rsquo;之一，当进行变换时产出边界的点将根据本参数非定的方法进行处理</li>
+<li>cval：浮点数或整数，当<code>fill_mode=constant</code>时，指定要向超出边界的点填充的值</li>
+<li>horizontal_flip：布尔值，进行随机水平翻转</li>
+<li>vertical_flip：布尔值，机型随机竖直翻转</li>
+<li>rescale：重放缩因子，默认为None。如果为None或0则不进行缩放，否则或将该数值乘到数据上</li>
+<li>preprocessing_function：将被应用于每个输入的函数。该函数将在任何其他修改之前运行。该函数接受一个参数，为一张图片（秩为3的numpy array），并且输出一个具有相同shape的numpy array</li>
+<li>data_format：字符串，&ldquo;channel_first&quot;或&quot;channel_last&quot;之一，代表图像的通道维的位置。该参数是Keras 1.x中的image_dim_ordering，&ldquo;channel_last&quot;对应原本的&quot;tf&rdquo;，&ldquo;channel_first&quot;对应原本的&quot;th&rdquo;。以128x128的RGB图像为例，&ldquo;channel_first&quot;应将数据组织为（3,128,128），而&quot;channel_last&quot;应将数据组织为（128,128,3）。该参数的默认值时<code>~/.keras/keras.json</code>中设置的值，若从未设置过，则为&quot;channel_last&rdquo;</li>
+</ul>
+<h2 id="方法">方法</h2>
+<ul>
+<li>fit(x, augment=False, rounds=1)：计算依赖于数据的变换所需要要的统计信息（均值方差等），只有使用<code>featurewise_center</code>，<code>featurewise_std_normalization</code>或<code>zca_whitening</code>时需要此函数
+<ul>
+<li>x：numpy array，样本数据，秩应为4.在黑白图像的情况下channel轴的值为1，在彩色图像情况下值为3</li>
+<li>augment：布尔值，确定是否使用随机提升过的数据</li>
+<li>round：若设<code>augment=True</code>，确定要在数据上进行多少轮数据提升，默认值为1</li>
+<li>seed：整数，随机数种子</li>
+</ul>
+</li>
+<li>flow(self,x,y,batch_size=32,shuffle=True,seed=None,save_to_dir=None,save_prefix=&rsquo;',save_format='jpeg&rsquo;)：接收numpy数组和标签为参数，生成过数据提升或标准化后的batch数据，并在一个无线循环中不断的返回batch数据
+<ul>
+<li>x：样本数据，秩为4，在黑白图像的情况下channel轴的值为1，在彩色图像情况下值为3</li>
+<li>y：标签</li>
+<li>batch_size：整数，默认32</li>
+<li>shuffle：布尔值，是否随机打乱数据，默认为True
+<ul>
+<li>save_to_dir：None或字符串，保存提升后图片时使用的前缀，仅当设置了<code>save_to_dir</code>时生效</li>
+<li>save_format：&ldquo;png&rdquo;，&ldquo;jpeg&quot;之一，指定保存图片的数据格式，默认&quot;jpeg&rdquo;</li>
+<li>yields：形如（x,y）的tuple，x是代表图像数据的numpy数组，y是代表标签的numpy数组，该迭代器无限循环</li>
+<li>seed：整数，随机数种子</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>flow_from_directory(directory)：以文件夹路径为i参数，生成经过数据提升/归一化后的数据，在一个无限循环中无限产生batch数据
+<ul>
+<li>directory：目标文件夹路径，对于每一个类，该文件夹都要包含一个子文件夹，子文件夹中任何jpg、png和bnp的图片都会被生成器使用</li>
+<li>target_size：整数tuple，默认为（256，256）图像将被resize成该尺寸</li>
+<li>color_model：颜色模式为&quot;grayscale&rdquo;,&ldquo;rgb&quot;之一，默认为&quot;rgb&rdquo;，代表这些图片是否会被转换为单通道或三通图片</li>
+<li>classes：可选参数，为子文件夹的列表，如[&lsquo;dogs&rsquo;,&lsquo;cats&rsquo;]默认为None，若未提供，则该类别列表将从<code>direcoory</code>下的子文件夹名称/结构自动推断。每一个子文件夹都会被认为是一个新的类（类别的顺序将按照字母表顺序映射到标签值）。通过属性<code>class_indices</code>可获得文件夹名与类的序号的对应字典</li>
+<li>class_model：&lsquo;categorical&rsquo;,&lsquo;binary&rsquo;,&lsquo;sparses&rsquo;,或None之一，默认为&rsquo;categorical&rsquo;,该参数决定了返回的标签数组的形式&rsquo;categorical&rsquo;会返回2D的one-hot编码标签</li>
+<li>batch_size：batch数据的大小，默认32</li>
+<li>shuffle：是否打乱数据，默认为True</li>
+<li>seed：可选参数，打乱数据和进行变换时的随机种子</li>
+<li>save_to_dir：None或字符串，该参数能让你提升后的图片保存起来，用以可视化</li>
+<li>save_prefix：字符串，保存提升后时使用的前缀，仅当设置了<code>save_to_dir</code>时生效</li>
+<li>save_format：&lsquo;png&rsquo;,&lsquo;jpeg&rsquo;之一，指定保存图片的数据格式，默认&rsquo;jpeg&rsquo;</li>
+<li>flollow_links：是否访问子文件夹的软连接</li>
+</ul>
+</li>
+</ul>
+<h2 id="例子">例子</h2>
+<p>使用<code>.flow()</code>的例子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">cifar10</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="n">Y_train</span> <span class="o">=</span> <span class="n">np_utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">nb_classes</span><span class="p">)</span>
+<span class="n">Y_test</span> <span class="o">=</span> <span class="n">np_utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">nb_classes</span><span class="p">)</span>
+
+<span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">featurewise_center</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                            <span class="n">featurewise_std_normalization</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                            <span class="n">rotation_range</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+                            <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                            <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+                            <span class="n">horizon_flip</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">datagen</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">),</span>
+                   <span class="n">samples_per_eopch</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span><span class="n">nb_epoch</span><span class="o">=</span><span class="n">nb_epoch</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nb_epoch</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">,</span><span class="n">e</span><span class="p">)</span>
+    <span class="n">batches</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">X_batch</span><span class="p">,</span> <span class="n">Y_batch</span><span class="p">,</span> <span class="ow">in</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">X_batch</span><span class="p">,</span> <span class="n">Y_batch</span><span class="p">)</span>
+        <span class="n">batches</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">batches</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">/</span><span class="mi">32</span><span class="p">:</span>
+        	<span class="k">break</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>使用<code>.flow_from_directory(directory)</code>的例子</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
+ 	<span class="n">shear_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+ 	<span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+ 	<span class="n">horizontal_flip</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">test_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">train_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+ 	<span class="s1">&#39;data/train&#39;</span><span class="p">,</span>
+ 	<span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span>
+ 	<span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+ 	<span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">validation_generator</span> <span class="o">=</span> <span class="n">test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+ 	<span class="s1">&#39;data/validation&#39;</span><span class="p">,</span>
+ 	<span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span>
+ 	<span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+ 	<span class="n">class_mode</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span>
+ 	<span class="n">train_generator</span><span class="p">,</span>
+ 	<span class="n">samples_per_epoch</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
+ 	<span class="n">nb_epoch</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+ 	<span class="n">validation_data</span><span class="o">=</span><span class="n">validation_generator</span><span class="p">,</span>
+ 	<span class="n">nb_val_samples</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></div>
+
+<div>
+    
+
+<div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+
+    <button id="rewardButton" disable="enable" background:transparent; style="background:transparent;border-style:none;"
+        onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+<div style="
+        font-size: 26px;
+        background: linear-gradient(500deg,#03a9f4,#f441a5,#ffeb3b,#f441a5,#03a9f4);
+        background-size: 400%;
+        width: 360px;
+        heght:120px
+
+        text-align: center;
+        border-radius: 50px;">
+赞赏</div></button>
+    <div id="QR" style="display: none;">
+        <div id="wechat" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="wechat_qr" src="https://brief-rf.github.io/images/wx.jpg" alt="WeChat Pay"></a>
+            <h3>微信赞赏</h3>
+        </div>
+        <div id="alipay" style="display: inline-block">
+            <a class="fancybox" rel="group">
+                <img id="alipay_qr" src="https://brief-rf.github.io/images/zfb.jpg" alt="Alipay"></a>
+            <h3>支付宝赞赏</h3>
+        </div>
+    </div>
+</div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/keras/">keras</a>,&nbsp;<a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();"></a></span>&nbsp;|&nbsp;<span><a href="/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/lossfunction/" class="prev" rel="prev" title="损失函数"><i class="fas fa-angle-left fa-fw"></i>损失函数</a>
+            <a href="/kerasnote2/" class="next" rel="next" title="Keras">Keras<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Brief</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"","maxShownLines":12},"comment":{"valine":{"appId":"And7jRXxCRMwU9UaYfRMBzmu-gzGzoHsz","appKey":"uxR07WeMo2PAnpLQmlcrAYDl","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":true,"highlight":true,"lang":"","pageSize":10,"placeholder":"快来发表评论吧~","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

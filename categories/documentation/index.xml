@@ -23,6 +23,24 @@
                 <img src="/images/keras.png" referrerpolicy="no-referrer">
             </div><p><strong>keras学习笔记（二）</strong></p>]]></description>
 </item><item>
+    <title>图片预处理</title>
+    <link>https://brief-rf.github.io/imggenerator/</link>
+    <pubDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/imggenerator/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/generator.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras学习笔记（三）</strong></p>]]></description>
+</item><item>
+    <title>损失函数</title>
+    <link>https://brief-rf.github.io/lossfunction/</link>
+    <pubDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/lossfunction/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lossF.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras学习笔记（四）</strong></p>]]></description>
+</item><item>
     <title>Keras</title>
     <link>https://brief-rf.github.io/kerasnote1/</link>
     <pubDate>Sat, 19 Dec 2020 00:00:00 &#43;0000</pubDate>
@@ -72,23 +90,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/termux.jpg" referrerpolicy="no-referrer">
             </div>官方的命令讲解 1 2 3 4 5 6 7 Usage: termux-dialog widget [options] Get user input w/ different widgets! Default: text -h, help Show this help -l, list List all widgets and their options -t, title Set title of input dialog (optional) 翻译后 1 2 3 4 5 6 7 #使用: termux-dialog widget [options] #获取用户输]]></description>
-</item><item>
-    <title>Termux-api之termux-toast</title>
-    <link>https://brief-rf.github.io/termux-toast/</link>
-    <pubDate>Thu, 11 Jun 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/termux-toast/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/termux.jpg" referrerpolicy="no-referrer">
-            </div>官方的命令讲解 1 2 3 4 5 6 7 8 9 Usage: termux-toast [-b bgcolor] [-c color] [-g gravity] [-s] [text] Show text in a Toast (a transient popup). The text to show is either supplied as arguments or read from stdin if no arguments are given. -h show this help -b set background color (default: gray) -c set text color (default: white) -g set]]></description>
-</item><item>
-    <title>制作自己的jar并用shell调用</title>
-    <link>https://brief-rf.github.io/framework.zh/</link>
-    <pubDate>Sat, 14 Mar 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/framework.zh/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/android.jpg" referrerpolicy="no-referrer">
-            </div>推送第三方jar至/system/framework 1.工具 安卓手机 AIDE软件 MT管理器 Termux软件 2.教程 打开AIDE，创建一个ja]]></description>
 </item></channel>
 </rss>

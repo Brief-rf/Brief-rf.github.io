@@ -25,6 +25,24 @@
                 <img src="/images/keras.png" referrerpolicy="no-referrer">
             </div><p><strong>keras学习笔记（二）</strong></p>]]></description>
 </item><item>
+    <title>图片预处理</title>
+    <link>https://brief-rf.github.io/imggenerator/</link>
+    <pubDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/imggenerator/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/generator.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras学习笔记（三）</strong></p>]]></description>
+</item><item>
+    <title>损失函数</title>
+    <link>https://brief-rf.github.io/lossfunction/</link>
+    <pubDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/lossfunction/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lossF.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras学习笔记（四）</strong></p>]]></description>
+</item><item>
     <title>Keras</title>
     <link>https://brief-rf.github.io/kerasnote1/</link>
     <pubDate>Sat, 19 Dec 2020 00:00:00 &#43;0000</pubDate>
@@ -76,21 +94,5 @@
     <author></author>
     <guid>https://brief-rf.github.io/pipsource/</guid>
     <description><![CDATA[<p><strong>知识-笔记</strong></p>]]></description>
-</item><item>
-    <title>机器学习知识总结</title>
-    <link>https://brief-rf.github.io/ml1/</link>
-    <pubDate>Mon, 09 Nov 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/ml1/</guid>
-    <description><![CDATA[<p><strong>笔记-科研</strong></p>]]></description>
-</item><item>
-    <title>致那些对科研热爱的学弟学妹</title>
-    <link>https://brief-rf.github.io/foryou/</link>
-    <pubDate>Fri, 02 Oct 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/foryou/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/study.jpg" referrerpolicy="no-referrer">
-            </div><p><strong>致新生-科研</strong></p>]]></description>
 </item></channel>
 </rss>
