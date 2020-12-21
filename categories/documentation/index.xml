@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/categories/documentation/</link>
         <description>文档 - category - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 21 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
     <title>搭建自己的云端IDE</title>
     <link>https://brief-rf.github.io/codeserver/</link>
     <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
@@ -13,6 +13,15 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>全连接网络</title>
+    <link>https://brief-rf.github.io/kerasexampledense/</link>
+    <pubDate>Mon, 21 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/kerasexampledense/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/sequential.png" referrerpolicy="no-referrer">
+            </div><p><strong>keras全连接层实例</strong></p>]]></description>
 </item><item>
     <title>Keras</title>
     <link>https://brief-rf.github.io/kerasnote2/</link>
@@ -81,14 +90,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/cet4.jpeg" referrerpolicy="no-referrer">
             </div><p><strong>大学英语CET4考试相关</strong></p>]]></description>
-</item><item>
-    <title>Termux-api之termux-dialog</title>
-    <link>https://brief-rf.github.io/termux-dialog/</link>
-    <pubDate>Thu, 11 Jun 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/termux-dialog/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/termux.jpg" referrerpolicy="no-referrer">
-            </div>官方的命令讲解 1 2 3 4 5 6 7 Usage: termux-dialog widget [options] Get user input w/ different widgets! Default: text -h, help Show this help -l, list List all widgets and their options -t, title Set title of input dialog (optional) 翻译后 1 2 3 4 5 6 7 #使用: termux-dialog widget [options] #获取用户输]]></description>
 </item></channel>
 </rss>
