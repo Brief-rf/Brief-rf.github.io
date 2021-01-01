@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>life - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/life/</link>
+        <description>life - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/life/" rel="self" type="application/rss+xml" /><item>
+    <title>回顾2020</title>
+    <link>https://brief-rf.github.io/2020summary/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/2020summary/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/summary.png" referrerpolicy="no-referrer">
+            </div><p><strong>回顾2020，我学到了什么呢</strong></p>]]></description>
+</item></channel>
+</rss>

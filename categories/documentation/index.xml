@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/categories/documentation/</link>
         <description>文档 - category - Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 21 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/categories/documentation/" rel="self" type="application/rss+xml" /><item>
     <title>搭建自己的云端IDE</title>
     <link>https://brief-rf.github.io/codeserver/</link>
     <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
@@ -13,6 +13,15 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>回顾2020</title>
+    <link>https://brief-rf.github.io/2020summary/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/2020summary/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/summary.png" referrerpolicy="no-referrer">
+            </div><p><strong>回顾2020，我学到了什么呢</strong></p>]]></description>
 </item><item>
     <title>全连接网络</title>
     <link>https://brief-rf.github.io/kerasexampledense/</link>
@@ -81,14 +90,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/colab.jpg" referrerpolicy="no-referrer">
             </div><p><strong>Google Colab之挂载谷歌硬盘</strong></p>]]></description>
-</item><item>
-    <title>大学英语四级考试</title>
-    <link>https://brief-rf.github.io/aboutcet4/</link>
-    <pubDate>Fri, 21 Aug 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/aboutcet4/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/cet4.jpeg" referrerpolicy="no-referrer">
-            </div><p><strong>大学英语CET4考试相关</strong></p>]]></description>
 </item></channel>
 </rss>
