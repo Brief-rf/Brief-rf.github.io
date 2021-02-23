@@ -4,7 +4,7 @@
         <link>https://brief-rf.github.io/posts/</link>
         <description> | Brief</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
-            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 12 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Feb 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>搭建自己的云端IDE</title>
     <link>https://brief-rf.github.io/codeserver/</link>
     <pubDate>Sat, 20 Jun 2020 21:57:40 &#43;0800</pubDate>
@@ -13,6 +13,15 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/codeserver.jpg" referrerpolicy="no-referrer">
             </div>服务器搭建code server 本篇教程所用到的是阿里云的服务器1m带宽，2核，4g运存 1.拥有一个自己的服务器 系统选择ubuntu最新的就行 2.下载对]]></description>
+</item><item>
+    <title>京东</title>
+    <link>https://brief-rf.github.io/jingdong/</link>
+    <pubDate>Tue, 23 Feb 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/jingdong/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/jd.jpg" referrerpolicy="no-referrer">
+            </div><p><strong>关于京东的一些活动</strong></p>]]></description>
 </item><item>
     <title>FUCK MY LIFE</title>
     <link>https://brief-rf.github.io/fucklife/</link>
@@ -85,14 +94,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/happiness.png" referrerpolicy="no-referrer">
             </div><p><strong>感谢曾经那些在我成长过程中给我提供过帮助的人</strong></p>]]></description>
-</item><item>
-    <title>工程实训</title>
-    <link>https://brief-rf.github.io/gcsx/</link>
-    <pubDate>Fri, 20 Nov 2020 00:00:00 &#43;0000</pubDate>
-    <author></author>
-    <guid>https://brief-rf.github.io/gcsx/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/gcsx.png" referrerpolicy="no-referrer">
-            </div><p><strong>工程实训相关</strong></p>]]></description>
 </item></channel>
 </rss>
