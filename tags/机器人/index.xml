@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>机器人 - tag - Brief</title>
+        <link>https://brief-rf.github.io/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+        <description>机器人 - tag - Brief</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>brf2053@gmail.com (Brief)</managingEditor>
+            <webMaster>brf2053@gmail.com (Brief)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://brief-rf.github.io/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>关于蛇形机器人使用说明</title>
+    <link>https://brief-rf.github.io/snake_robot_op/</link>
+    <pubDate>Sun, 07 Mar 2021 00:00:00 &#43;0000</pubDate>
+    <author></author>
+    <guid>https://brief-rf.github.io/snake_robot_op/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/success.png" referrerpolicy="no-referrer">
+            </div>1.准备工作 机器人通过wifi进行数据传输包括视频画面和传感器数据 树莓派上电 默认情况下树莓派开机后会自动连接Brie名称的wifi 查看树莓派]]></description>
+</item></channel>
+</rss>
